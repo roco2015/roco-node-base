@@ -10,6 +10,6 @@ export class TestController {
   @get('/test')
   public async index(ctx: DarukContext) {
     const user = await this.userService.getOneUser();
-    ctx.body = `hello ${user?.user_name}`;
+    ctx.body = `hello ${user.user_name}`;
   }
 }
